@@ -5,7 +5,7 @@ from collections import OrderedDict
 
 def read_File():
     code = []
-    f = open("Version-1.0\SourceCode.py", "r")
+    f = open("SourceCode.py", "r")
     raw_Code = f.readlines()
     for i in raw_Code:
         if i != '\n' and i != '':
@@ -15,7 +15,7 @@ def read_File():
 
 complex_Alterations = OrderedDict()
 complex_Alterations = {
-    'False': 'False', 'None': 'None', 'True': 'True', 'and': '(and)', 'as': 'as', 'assert': 'assert', 'async': 'async', 'await': 'await', 'break': 'Break the flow of code', 'class': 'Define a class', 'continue': 'Break this iteration of code', 'def': 'Define a funtion', 'del': 'del', 'elif': 'Otherwise if', 'else:': 'Otherwise', 'except': 'except', 'finally': 'finally', 'for': 'Initiate a for loop with variable', 'from': 'from', 'global': 'Define a global variable', 'if': 'Check whether ', 'import': 'Import a module named ', 'in': 'in', ' is ': 'is equal to', 'lambda': 'lamda', 'nonlocal': 'nonlocal', ' not ': 'not', ' or ': '(or)', 'pass': 'pass', 'raise': 'raise', 'return': 'Return ', 'try': 'Try', 'while': 'Initiate a while loop with condition', 'with': 'with'
+    'False': 'False', 'None': 'None', 'True': 'True', 'and': '(and)', 'as': 'as', 'assert': 'assert', 'async': 'async', 'await': 'await', 'break': 'Break the flow of code', 'class': 'Define a class', 'continue': 'Break this iteration of code', 'def': 'Define a funtion', 'del': 'del', 'elif': 'Otherwise if', 'else:': 'Otherwise', 'except': 'except', 'finally': 'finally', 'for': 'Initiate a for loop with variable', 'from': 'from', 'global': 'Define a global variable', 'if': 'Check whether ', 'import': 'Import a module named ', 'in': 'in', ' is ': ' is ', 'lambda': 'lamda', 'nonlocal': 'nonlocal', ' not ': 'not', ' or ': '(or)', 'pass': 'pass', 'raise': 'raise', 'return': 'Return ', 'try': 'Try', 'while': 'Initiate a while loop with condition', 'with': 'with'
 }
 arithmetic_Alterations = OrderedDict()
 arithmetic_Alterations = {
