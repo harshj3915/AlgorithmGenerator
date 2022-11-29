@@ -15,7 +15,7 @@ def read_File():
 try:
     complex_Alterations = OrderedDict()
     complex_Alterations = {
-        'False': 'False', 'None': 'None', 'True': 'True', 'and': '(and)', 'as': 'as', 'assert': 'assert', 'async': 'async', 'await': 'await', 'break': 'Break the flow of code', 'class': 'Define a class', 'continue': 'Break this iteration of code', 'def': 'Define a funtion', 'del': 'del', 'elif': 'Otherwise if', 'else:': 'Otherwise', 'except': 'except', 'finally': 'finally', 'for': 'Initiate a for loop with variable', 'from': 'from', 'global': 'Define a global variable', 'if': 'Check whether ', 'import': 'Import a module named ', 'in': 'in', ' is ': ' is ', 'lambda': 'lamda', 'nonlocal': 'nonlocal', ' not ': 'not', ' or ': '(or)', 'pass': 'pass', 'raise': 'raise', 'return': 'Return ', 'try': 'Try', 'while': 'Initiate a while loop with condition', 'with': 'with'
+        'False': 'False', 'None': 'None', 'True': 'True', ' and ': '(and)', 'as': 'as', 'assert': 'assert', 'async': 'async', 'await': 'await', 'break': 'Break the flow of code', 'class': 'Define a class', 'continue': 'Break this iteration of code', 'def': 'Define a funtion', 'del': 'del', 'elif': 'Otherwise if', 'else:': 'Otherwise', 'except': 'except', 'finally': 'finally', 'for': 'Initiate a for loop with variable', 'from': 'from', 'global': 'Define a global variable', 'if': 'Check whether ', 'import': 'Import a module named ', 'in': 'in', ' is ': ' is ', 'lambda': 'lamda', 'nonlocal': 'nonlocal', ' not ': 'not', ' or ': '(or)', 'pass': 'pass', 'raise': 'raise', 'return': 'Return ', 'try': 'Try', 'while': 'Initiate a while loop with condition', 'with': 'with'
     }
     arithmetic_Alterations = OrderedDict()
     arithmetic_Alterations = {
@@ -48,8 +48,6 @@ try:
         if '#' in code_Line:
             code_Line = code_Line[0:code_Line.index('#')]
 
-        if len(code_Line)==0:
-            continue
 
         if 'input(' in code_Line and 'print(' not in code_Line:
             code_Line = 'Accept a variable ' + \
@@ -69,7 +67,8 @@ try:
                 if key in code_Line:
 
                     code_Line = code_Line.replace(key, arithmetic_Alterations[key])
-        
+        if len(code_Line)==0:
+            continue
         if code_Line[-1] == ':':
             code_Line = code_Line[0:-1]
         if code_Line[0] == ' ':
