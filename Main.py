@@ -83,7 +83,6 @@ try:
             f.write('\n')
         f.write("STEP"+str(len(Algorithm)+1)+": STOP")
 except Exception as e:
-    print(e)
     with open('Algorithm.txt', 'w') as f:
         f.write(str(e))
 
